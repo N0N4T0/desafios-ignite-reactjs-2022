@@ -1,8 +1,13 @@
+import { Header } from './components/Header'
+import { NewTask } from './components/NewTask'
 import './global.css'
 
 export function App() {
 
   return (
-    <h1>Hello World</h1>
+    <>
+      <Header/>
+      <NewTask/>
+    </>
   )
 }
