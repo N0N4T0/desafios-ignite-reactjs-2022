@@ -5,9 +5,70 @@ main {
 
 main form {
     display: flex;
+    gap: 20px;
+}
+
+main form input,
+main form button[type=submit]{
+    display: flex;
+    
+    border-radius: 8px;
+    margin: -1.5rem 0 0 0;
+    
+    border: none;
+    color: var(--white);
 }
 
 main form input{
-    display: flex;
     flex: 1;
+    background: var(--gray-500);
+    outline-color: var(--blue-dark);
+    padding: 0.75rem 0 0.75rem 1rem;
+}
+
+main form footer{
+    display: flex;
+}
+
+main form button[type=submit]{
+    display: flex;
+    padding: 1rem;
+    background: var(--blue-dark);
+    color: var(--white);
+    outline-color: var(--white);
+
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main form button[type=submit] svg{
+    margin: 0 0 0 5px;
+}
+
+main .tasksContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0 0 0;
+    
+    border-bottom: 1px solid var(--gray-400);
+}
+
+main .newTask{
+    color: var(--blue);
+    font-weight: bold;
+}
+
+main .newTask span{
+    color: var(--white);
+    background: red;
+
+    height: 19px;
+    padding: 8px 2px;
+    margin: 0 0 0 10px;
+}
+
+main .taskDone{
+    color: var(--purple);
+    font-weight: bold;
 }
