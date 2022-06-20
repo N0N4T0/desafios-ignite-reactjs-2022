@@ -1,0 +1,18 @@
+.container {
+    margin: 40px auto;
+    max-width: 746px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emptyMessage{
+    margin: 20px 0 0 0;
+    color: var(--gray-300);
+}
+
+p:first-child {
+    font-weight: bold;
+}

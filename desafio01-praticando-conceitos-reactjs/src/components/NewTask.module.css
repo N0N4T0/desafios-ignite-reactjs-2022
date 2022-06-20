@@ -40,6 +40,18 @@ main form button[type=submit]{
     align-items: center;
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.1s;
+}
+
+main form button[type=submit]:not(:disabled):hover{
+    background: var(--blue);
+}
+
+main form button[type=submit]:disabled{
+    opacity: 0.8;
+    cursor: not-allowed;
 }
 
 main form button[type=submit] svg{
@@ -52,6 +64,7 @@ main .tasksContainer{
     margin: 3rem 0 0 0;
     
     border-bottom: 1px solid var(--gray-400);
+    padding: 0 0 20px 0;
 }
 
 main .newTask{
@@ -59,16 +72,18 @@ main .newTask{
     font-weight: bold;
 }
 
-main .newTask span{
-    color: var(--white);
-    background: red;
-
-    height: 19px;
-    padding: 8px 2px;
-    margin: 0 0 0 10px;
-}
-
 main .taskDone{
     color: var(--purple);
     font-weight: bold;
 }
+
+main .newTask span,
+main .taskDone span{
+    color: var(--white);
+    background: var(--gray-400);
+    border-radius: 50%;
+
+    padding: 4px 8px;
+    margin: 0 0 0 10px;
+}
+
