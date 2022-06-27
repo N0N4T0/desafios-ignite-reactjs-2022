@@ -1,6 +1,7 @@
 import { PlusCircle } from 'phosphor-react'
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 import styles from './NewTask.module.css'
+import { TaskList } from './TaskList'
 
 export function NewTask(){
     const [newTaskText, setNewTaskText] = useState('')
@@ -30,36 +31,30 @@ export function NewTask(){
     const isNewTaskEmpty = newTaskText.length === 0
 
     return(
-        <main className={styles.main}>
-            <form onSubmit={handleCounterNewTask}>
-                <input 
-                    type="text"
-                    name="newTask"
-                    placeholder='Adicione uma tarefa'
-                    value={newTaskText}
-                    onChange={handleNewTaskChange}
-                    onInvalid={handleNewTaskInvalid}
-                    required
-                />
+        <>
+            <main className={styles.main}>
+                <form onSubmit={handleCounterNewTask}>
+                    <input 
+                        type="text"
+                        name="newTask"
+                        placeholder='Adicione uma tarefa'
+                        value={newTaskText}
+                        onChange={handleNewTaskChange}
+                        onInvalid={handleNewTaskInvalid}
+                        required
+                    />
 
-                <footer>
-                    <button type="submit" disabled={isNewTaskEmpty}>
-                        Criar
-                        <PlusCircle size={16} />
-                    </button>
-                </footer>
-            </form>
-        
-            <div className={styles.tasksContainer}>
-                <div className={styles.newTask}>
-                    Tarefas criadas
-                    <span>{numberOfTasksCreated}</span>
-                </div>
-                <div className={styles.taskDone}>
-                    Concluídas
-                    <span>{numberOfTasksDone}</span>
-                </div>
-            </div>
-        </main>
+                    <footer>
+                        <button type="submit" disabled={isNewTaskEmpty}>
+                            Criar
+                            <PlusCircle size={16} />
+                        </button>
+                    </footer>
+                </form>               
+                
+                <TaskList/>
+            </main>
+        </>
+
     )
 }
