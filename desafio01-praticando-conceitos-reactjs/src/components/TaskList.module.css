@@ -7,7 +7,7 @@
     padding: 0 0 20px 0;
 }
 
-.newTask{
+.taskList{
     color: var(--blue);
     font-weight: bold;
 }
@@ -17,7 +17,7 @@
     font-weight: bold;
 }
 
-.newTask span,
+.taskList span,
 .taskDone span{
     color: var(--white);
     background: var(--gray-400);
@@ -45,4 +45,10 @@
 
 p:first-child {
     font-weight: bold;
+}
+
+.cardInformations{
+    display: flex;
+    list-style: none;
+    width: 100%;
 }

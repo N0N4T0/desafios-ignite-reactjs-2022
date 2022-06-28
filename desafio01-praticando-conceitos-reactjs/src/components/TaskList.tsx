@@ -2,16 +2,18 @@ import styles from './TaskList.module.css'
 
 import clipboard from '../assets/clipboard.svg'
 import { useState } from 'react';
+import { TaskCard } from './TaskCard';
 
 export function TaskList(){
 
     const [tasksDone, setTaksDone] = useState(0)
+    //deixar como true pois a primeira premissa do if é true
     const isEmptyTask = false
 
     return (
         <>
             <div className={styles.taskListContainer}>
-                <div className={styles.newTask}>
+                <div className={styles.taskList}>
                     Tarefas criadas
                     {/* <span>{numberOfTasksCreated}</span> */}
                     <span>0</span>
@@ -32,7 +34,11 @@ export function TaskList(){
                             <p>Crie tarefas e organize seus itens a fazer</p>
                         </div>
                     </>
-                ) : ('oi')}
+                ) : (
+                    <ul className={styles.cardInformations}>
+                        <TaskCard/>
+                    </ul>
+                )}
             </div>
         </>
     )

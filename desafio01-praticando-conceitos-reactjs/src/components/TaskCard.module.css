@@ -1,0 +1,33 @@
+.cardInformation {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: var(--gray-500);
+
+    padding: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.cardInformation button{
+    cursor: pointer;
+   
+    display: flex;
+    align-items: center;
+
+    border-radius: 50%;
+    background: none;
+    border-color: var(--gray-500);
+}
+
+.cardInformation button:first-child{
+    /* background: inherit; */
+    border-color: blue;
+}
+
+.cardInformation p{
+    color: var(--white);
+}
+
+.cardInformation button:nth-child(2) {
+    background: red;
+}
