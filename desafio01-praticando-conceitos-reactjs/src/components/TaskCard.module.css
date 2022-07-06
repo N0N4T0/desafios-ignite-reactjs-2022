@@ -1,7 +1,7 @@
 .cardInformation {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background: var(--gray-500);
 
     padding: 1.5rem 0;
@@ -12,22 +12,38 @@
     cursor: pointer;
    
     display: flex;
-    align-items: center;
-
-    border-radius: 50%;
-    background: none;
-    border-color: var(--gray-500);
+    align-self: center;
 }
 
-.cardInformation button:first-child{
-    /* background: inherit; */
-    border-color: blue;
+.cardInformation .check{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-color: var(--blue);
+    border-width: 2px;
+    border-radius: 50%;
+    background: none;
+
+    transition: background-color 1s;
+}
+
+.cardInformation .check:hover{
+    background: var(--purple-dark);
+    border-color: var(--purple-dark);
 }
 
 .cardInformation p{
     color: var(--white);
 }
 
-.cardInformation button:nth-child(2) {
-    background: red;
+.cardInformation .trash {
+    background: none;
+    outline-color: var(--danger);
+    color: var(--gray-300);
+    border: unset;
+
+    transition: color 1s;
+}
+
+.cardInformation .trash:hover {
+    color: var(--danger);
 }

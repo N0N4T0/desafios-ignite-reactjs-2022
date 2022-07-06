@@ -36,7 +36,8 @@ export function TaskList(){
                     </>
                 ) : (
                     <ul className={styles.cardInformations}>
-                        <TaskCard/>
+                        <TaskCard content='Ineger urna interdum massa libero auctor neque turpis turpis semper'/>
+                        <TaskCard content='Ineger urna interdum massa libero auctor neque turpis turpis semper. Ineger urna interdum massa libero auctor neque turpis turpis semper'/>
                     </ul>
                 )}
             </div>

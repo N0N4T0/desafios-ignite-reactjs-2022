@@ -11,9 +11,9 @@ export function TaskCard(props: TaskCardProps){
 
     return(
         <li className={styles.cardInformation}>
-            <button><CheckCircle size={24}/></button>
-            <p>Ineger urna interdum massa libero auctor neque turpis turpis semper</p>
-            <button><Trash size={24}/></button>
+            <button className={styles.check}></button>
+            <p>{content}</p>
+            <button className={styles.trash}><Trash size={24}/></button>
         </li>
     )
 }
