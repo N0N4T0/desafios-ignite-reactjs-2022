@@ -1,19 +1,57 @@
 .cardInformation {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background: var(--gray-500);
 
     padding: 1.5rem 0;
     border-radius: 8px;
+    align-items: center;
 }
 
-.cardInformation button{
+.checkbox {
+    min-width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid var(--blue);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
     cursor: pointer;
-   
-    display: flex;
-    align-self: center;
+    align-items: center;
+
+    margin: 0 1rem;
 }
+
+.checkbox:hover {
+    border: 1px solid var(--blue-dark);
+}
+
+.checkbox:checked {
+    background: var(--purple-dark);
+    border: 0;
+    opacity: 0.9;
+}
+
+.checkbox:checked:hover {
+    background: var(--purple);
+}
+
+/* .checkbox:checked:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 4px;
+    width: 10px;
+    opacity: 1;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 22px;
+    top: 25px;
+} */
 
 .cardInformation .check{
     height: 1.5rem;
@@ -33,15 +71,21 @@
 
 .cardInformation p{
     color: var(--white);
+    font-size: 14px;
 }
 
 .cardInformation .trash {
+    cursor: pointer;
+   
+    display: flex;
+    align-self: center;
     background: none;
     outline-color: var(--danger);
     color: var(--gray-300);
     border: unset;
 
     transition: color 1s;
+    margin: 0 1.5rem;
 }
 
 .cardInformation .trash:hover {

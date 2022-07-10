@@ -11,7 +11,7 @@ export function TaskCard(props: TaskCardProps){
 
     return(
         <li className={styles.cardInformation}>
-            <button className={styles.check}></button>
+            <input type="checkbox" className={styles.checkbox} />
             <p>{content}</p>
             <button className={styles.trash}><Trash size={24}/></button>
         </li>
