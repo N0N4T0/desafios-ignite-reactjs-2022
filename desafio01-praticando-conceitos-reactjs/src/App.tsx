@@ -1,13 +1,12 @@
-import { Header } from './components/Header'
-import { NewTask } from './components/NewTask'
-import './global.css'
+import { Header } from "./components";
+import { NewTask } from "./components/NewTask";
+import "./global.css";
 
 export function App() {
-
   return (
     <>
-      <Header/>
-      <NewTask/>
+      <Header />
+      <NewTask />
     </>
-  )
+  );
 }
