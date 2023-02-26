@@ -14,6 +14,10 @@ Desafios - Bootcamp IGNITE REACTJS
 ## Challenges
 
 1. Todo App
+<div align="center">
+    <img src="https://github.com/N0N4T0/desafios-ignite-reactjs-2022/blob/main/readmeImg/todoApp.png" width="800" height="400">   
+</div>
+<br><br>
 
 Nesse desafio, foi desenvolvido uma aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
 
