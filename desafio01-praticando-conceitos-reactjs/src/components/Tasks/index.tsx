@@ -37,6 +37,18 @@ export function Tasks(props: TasksProps) {
     }
   }
 
+  function renderDoneTasksTitle() {
+    if (!tasksQuantity) {
+      return tasksQuantity;
+    }
+
+    return (
+      <>
+        {completedTasks} de {tasksQuantity}
+      </>
+    );
+  }
+
   return (
     <>
       <div className={styles.taskListContainer}>
@@ -45,10 +57,8 @@ export function Tasks(props: TasksProps) {
           <span>{tasksQuantity}</span>
         </div>
         <div className={styles.taskDone}>
-          Concluídas
-          <span>
-            {completedTasks} de {tasksQuantity}
-          </span>
+          <span>Concluídas</span>
+          <span>{renderDoneTasksTitle()}</span>
         </div>
       </div>
 

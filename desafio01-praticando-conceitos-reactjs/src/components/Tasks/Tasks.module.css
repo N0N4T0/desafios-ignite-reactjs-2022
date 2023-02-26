@@ -20,13 +20,14 @@
     font-weight: bold;
 }
 
-.taskList span,
-.taskDone span{
+
+.taskList span + span,
+.taskDone span + span{
     color: var(--white);
     background: var(--gray-400);
-    border-radius: 50%;
+    border-radius: 30px;
 
-    padding: 4px 8px;
+    padding: 4px 12px;
     margin: 0 0 0 10px;
 }
 
