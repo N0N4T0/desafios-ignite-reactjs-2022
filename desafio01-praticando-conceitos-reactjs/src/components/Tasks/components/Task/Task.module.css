@@ -9,13 +9,13 @@
     align-items: center;
 }
 
-.checkbox {
-    min-width: 1.5rem;
+.selectedTask {
+    width: 1.5rem;
     height: 1.5rem;
     background-color: transparent;
     border-radius: 50%;
     vertical-align: middle;
-    border: 1px solid var(--blue);
+    border: 2px solid var(--blue);
     appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -23,35 +23,38 @@
     align-items: center;
 
     margin: 0 1rem;
+
+    position: relative;
 }
 
-.checkbox:hover {
-    border: 1px solid var(--blue-dark);
+.selectedTask:hover {
+    border: 2px solid var(--blue-dark);
+    background-color: var(--blue-dark);
 }
 
-.checkbox:checked {
-    background: var(--purple-dark);
-    border: 0;
-    opacity: 0.9;
-}
-
-.checkbox:checked:hover {
-    background: var(--purple);
-}
-
-/* .checkbox:checked:after {
-    border: 2px solid #fff;
-    border-top: none;
-    border-right: none;
-    content: "";
-    height: 4px;
-    width: 10px;
-    opacity: 1;
+.completedSelectedTask, .uncompletedTask{
     position: absolute;
-    transform: rotate(-45deg);
-    left: 22px;
-    top: 25px;
-} */
+    top: -2px;
+    left: -2px;
+}
+
+.completedSelectedTask{
+    background: var(--purple-dark);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+
+    line-height: 24px;
+}
+
+.checkIconClass {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.textTaskIsCompleted {
+    text-decoration: line-through;
+}
 
 .cardInformation .check{
     height: 1.5rem;
