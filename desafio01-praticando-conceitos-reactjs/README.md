@@ -37,3 +37,11 @@ http://localhost:3000/
   <br><br>
 
 ## Ilustrations
+
+<div align="center">
+    <img src="../desafio01-praticando-conceitos-reactjs/src/assets/readmeImg/1.png" width="800" height="400">   
+    <img src="../desafio01-praticando-conceitos-reactjs/src/assets/readmeImg/2.png" width="800" height="400">   
+    <img src="../desafio01-praticando-conceitos-reactjs/src/assets/readmeImg/3.png" width="800" height="400">   
+    <img src="../desafio01-praticando-conceitos-reactjs/src/assets/readmeImg/4.png" width="800" height="400">   
+</div>
+<br><br>
