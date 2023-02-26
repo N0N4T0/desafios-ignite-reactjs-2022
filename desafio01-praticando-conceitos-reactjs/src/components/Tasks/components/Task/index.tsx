@@ -1,18 +1,17 @@
 import { CheckCircle, Trash } from "phosphor-react";
-import { useState } from "react";
-import styles from "./TaskCard.module.css";
+import styles from "./Task.module.css";
+import { TaskProps } from "./types";
 
-interface TaskCardProps {
-  content: string;
-}
+export function Task(props: TaskProps) {
+  const { task, onComplete, onDelete } = props;
 
-export function TaskCard(props: TaskCardProps) {
-  const { content } = props;
+  const { id, isCompleted, text } = task;
 
   return (
     <li className={styles.cardInformation}>
+      {/* //ToDO add button */}
       <input type="checkbox" className={styles.checkbox} />
-      <p>{content}</p>
+      <p>{text}</p>
       <button className={styles.trash}>
         <Trash size={24} />
       </button>

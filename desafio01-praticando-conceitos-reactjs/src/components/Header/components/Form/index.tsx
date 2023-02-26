@@ -1,44 +1,40 @@
 import { PlusCircle } from "phosphor-react";
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
-import styles from "./NewTask.module.css";
-import { TaskList } from "../TaskList";
+import styles from "./Form.module.css";
+import { FormProps } from "./types";
 
-export function NewTask() {
-  const [newTaskText, setNewTaskText] = useState("");
+export function Form(props: FormProps) {
+  const { onAddTask } = props;
 
-  const [numberOfTasksCreated, setNumberOfTasksCreated] = useState(0);
-  const [numberOfTasksDone, setNumberOfTasksDone] = useState(0);
+  const [task, setTask] = useState("");
 
-  function handleCounterNewTask(event: FormEvent) {
+  function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
-    setNewTaskText("");
-
-    setNumberOfTasksCreated((state) => {
-      return state + 1;
-    });
+    onAddTask(task);
+    setTask("");
   }
 
   function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
     event.target.setCustomValidity("");
-    setNewTaskText(event.target.value);
+    setTask(event.target.value);
   }
 
   function handleNewTaskInvalid(event: InvalidEvent<HTMLInputElement>) {
     event.target.setCustomValidity("Este campo é obrigatório");
   }
 
-  const isNewTaskEmpty = newTaskText.length === 0;
+  const isNewTaskEmpty = !task;
 
   return (
     <>
       <main className={styles.main}>
-        <form onSubmit={handleCounterNewTask}>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="newTask"
             placeholder="Adicione uma tarefa"
-            value={newTaskText}
+            value={task}
             onChange={handleNewTaskChange}
             onInvalid={handleNewTaskInvalid}
             required
@@ -51,8 +47,6 @@ export function NewTask() {
             </button>
           </footer>
         </form>
-
-        <TaskList />
       </main>
     </>
   );
