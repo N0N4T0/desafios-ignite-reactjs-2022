@@ -7,7 +7,10 @@ export function App() {
   const [tasks, setTasks] = useState<AppProps[]>([]);
 
   function addTask(taskText: string) {
-    setTasks([...tasks, { id: "1", text: taskText, isCompleted: false }]);
+    setTasks([
+      ...tasks,
+      { id: crypto.randomUUID(), text: taskText, isCompleted: false },
+    ]);
   }
 
   function deleteTaskById(taskId: string) {
