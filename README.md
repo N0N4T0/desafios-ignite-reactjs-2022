@@ -4,7 +4,6 @@
 
 1. [Description](#description)
 2. [Challenges](#challenges)
-3. [Ilustrations](#ilustrations)
    <br><br>
 
 ## Description
@@ -23,5 +22,3 @@ Nesse desafio, foi desenvolvido uma aplicação de controle de tarefas no estilo
 - Remover uma tarefa da listagem
 - Mostrar o progresso de conclusão das tarefas
   <br><br>
-
-## Ilustrations
